@@ -1,0 +1,32 @@
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+           xmlns:tns="http://unitel.co/soapwebservice_funcionario"
+           targetNamespace="http://unitel.co/soapwebservice_funcionario"
+           elementFormDefault="qualified">
+
+
+    <xs:element name="addFuncionarioRequest">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="funcionario" type="tns:funcionario"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+    <xs:element name="getFuncionarioResponse">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="funcionario" type="tns:funcionario"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+    <xs:complexType name="funcionario">
+        <xs:sequence>
+            <xs:element name="nome" type="xs:string"/>
+            <xs:element name="telefone" type="xs:string"/>
+            <xs:element name="email" type="xs:string"/>
+            <xs:element name="bi" type="xs:string"/>
+        </xs:sequence>
+    </xs:complexType>
+
+</xs:schema>
