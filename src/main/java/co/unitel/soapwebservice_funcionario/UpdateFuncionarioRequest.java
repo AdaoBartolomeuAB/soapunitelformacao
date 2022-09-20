@@ -6,7 +6,7 @@
 //
 
 
-package co.unitel.soapwebservice_hello_world;
+package co.unitel.soapwebservice_funcionario;
 
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
@@ -25,7 +25,7 @@ import javax.xml.bind.annotation.XmlType;
  *   &lt;complexContent>
  *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
  *       &lt;sequence>
- *         &lt;element name="mensagem" type="{http://www.w3.org/2001/XMLSchema}string"/>
+ *         &lt;element name="funcionario" type="{http://unitel.co/soapwebservice_funcionario}funcionarioGet"/>
  *       &lt;/sequence>
  *     &lt;/restriction>
  *   &lt;/complexContent>
@@ -36,36 +36,36 @@ import javax.xml.bind.annotation.XmlType;
  */
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlType(name = "", propOrder = {
-    "mensagem"
+    "funcionario"
 })
-@XmlRootElement(name = "getNameResponse")
-public class GetNameResponse {
+@XmlRootElement(name = "updateFuncionarioRequest")
+public class UpdateFuncionarioRequest {
 
     @XmlElement(required = true)
-    protected String mensagem;
+    protected FuncionarioGet funcionario;
 
     /**
-     * Gets the value of the mensagem property.
+     * Gets the value of the funcionario property.
      * 
      * @return
      *     possible object is
-     *     {@link String }
+     *     {@link FuncionarioGet }
      *     
      */
-    public String getMensagem() {
-        return mensagem;
+    public FuncionarioGet getFuncionario() {
+        return funcionario;
     }
 
     /**
-     * Sets the value of the mensagem property.
+     * Sets the value of the funcionario property.
      * 
      * @param value
      *     allowed object is
-     *     {@link String }
+     *     {@link FuncionarioGet }
      *     
      */
-    public void setMensagem(String value) {
-        this.mensagem = value;
+    public void setFuncionario(FuncionarioGet value) {
+        this.funcionario = value;
     }
 
 }

@@ -6,11 +6,10 @@
 //
 
 
-package co.unitel.soapwebservice_hello_world;
+package co.unitel.soapwebservice_funcionario;
 
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
-import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlRootElement;
 import javax.xml.bind.annotation.XmlType;
 
@@ -24,9 +23,6 @@ import javax.xml.bind.annotation.XmlType;
  * &lt;complexType>
  *   &lt;complexContent>
  *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
- *       &lt;sequence>
- *         &lt;element name="mensagem" type="{http://www.w3.org/2001/XMLSchema}string"/>
- *       &lt;/sequence>
  *     &lt;/restriction>
  *   &lt;/complexContent>
  * &lt;/complexType>
@@ -35,37 +31,9 @@ import javax.xml.bind.annotation.XmlType;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "", propOrder = {
-    "mensagem"
-})
-@XmlRootElement(name = "getNameResponse")
-public class GetNameResponse {
+@XmlType(name = "")
+@XmlRootElement(name = "getFuncionariosRequest")
+public class GetFuncionariosRequest {
 
-    @XmlElement(required = true)
-    protected String mensagem;
-
-    /**
-     * Gets the value of the mensagem property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link String }
-     *     
-     */
-    public String getMensagem() {
-        return mensagem;
-    }
-
-    /**
-     * Sets the value of the mensagem property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link String }
-     *     
-     */
-    public void setMensagem(String value) {
-        this.mensagem = value;
-    }
 
 }

@@ -6,7 +6,7 @@
 //
 
 
-package co.unitel.soapwebservice_hello_world;
+package co.unitel.soapwebservice_funcionario;
 
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
@@ -38,8 +38,8 @@ import javax.xml.bind.annotation.XmlType;
 @XmlType(name = "", propOrder = {
     "mensagem"
 })
-@XmlRootElement(name = "getNameResponse")
-public class GetNameResponse {
+@XmlRootElement(name = "mensagemResponse")
+public class MensagemResponse {
 
     @XmlElement(required = true)
     protected String mensagem;

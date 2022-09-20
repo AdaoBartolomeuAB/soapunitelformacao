@@ -6,7 +6,7 @@
 //
 
 
-package co.unitel.soapwebservice_hello_world;
+package co.unitel.soapwebservice_funcionario;
 
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
@@ -25,7 +25,7 @@ import javax.xml.bind.annotation.XmlType;
  *   &lt;complexContent>
  *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
  *       &lt;sequence>
- *         &lt;element name="mensagem" type="{http://www.w3.org/2001/XMLSchema}string"/>
+ *         &lt;element name="campo" type="{http://www.w3.org/2001/XMLSchema}string"/>
  *       &lt;/sequence>
  *     &lt;/restriction>
  *   &lt;/complexContent>
@@ -36,36 +36,36 @@ import javax.xml.bind.annotation.XmlType;
  */
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlType(name = "", propOrder = {
-    "mensagem"
+    "campo"
 })
-@XmlRootElement(name = "getNameResponse")
-public class GetNameResponse {
+@XmlRootElement(name = "findFuncionarioRequest")
+public class FindFuncionarioRequest {
 
     @XmlElement(required = true)
-    protected String mensagem;
+    protected String campo;
 
     /**
-     * Gets the value of the mensagem property.
+     * Gets the value of the campo property.
      * 
      * @return
      *     possible object is
      *     {@link String }
      *     
      */
-    public String getMensagem() {
-        return mensagem;
+    public String getCampo() {
+        return campo;
     }
 
     /**
-     * Sets the value of the mensagem property.
+     * Sets the value of the campo property.
      * 
      * @param value
      *     allowed object is
      *     {@link String }
      *     
      */
-    public void setMensagem(String value) {
-        this.mensagem = value;
+    public void setCampo(String value) {
+        this.campo = value;
     }
 
 }

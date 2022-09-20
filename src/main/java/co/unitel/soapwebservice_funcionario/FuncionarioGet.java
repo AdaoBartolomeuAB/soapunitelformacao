@@ -15,15 +15,16 @@ import javax.xml.bind.annotation.XmlType;
 
 
 /**
- * <p>Java class for funcionario complex type.
+ * <p>Java class for funcionarioGet complex type.
  * 
  * <p>The following schema fragment specifies the expected content contained within this class.
  * 
  * <pre>
- * &lt;complexType name="funcionario">
+ * &lt;complexType name="funcionarioGet">
  *   &lt;complexContent>
  *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
  *       &lt;sequence>
+ *         &lt;element name="id" type="{http://www.w3.org/2001/XMLSchema}long"/>
  *         &lt;element name="nome" type="{http://www.w3.org/2001/XMLSchema}string"/>
  *         &lt;element name="telefone" type="{http://www.w3.org/2001/XMLSchema}string"/>
  *         &lt;element name="email" type="{http://www.w3.org/2001/XMLSchema}string"/>
@@ -37,14 +38,16 @@ import javax.xml.bind.annotation.XmlType;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "funcionario", propOrder = {
+@XmlType(name = "funcionarioGet", propOrder = {
+    "id",
     "nome",
     "telefone",
     "email",
     "bi"
 })
-public class Funcionario {
+public class FuncionarioGet {
 
+    protected long id;
     @XmlElement(required = true)
     protected String nome;
     @XmlElement(required = true)
@@ -53,6 +56,22 @@ public class Funcionario {
     protected String email;
     @XmlElement(required = true)
     protected String bi;
+
+    /**
+     * Gets the value of the id property.
+     * 
+     */
+    public long getId() {
+        return id;
+    }
+
+    /**
+     * Sets the value of the id property.
+     * 
+     */
+    public void setId(long value) {
+        this.id = value;
+    }
 
     /**
      * Gets the value of the nome property.

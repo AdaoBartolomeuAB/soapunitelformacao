@@ -1,0 +1,16 @@
+Exercícios:
+
+Salvar funcionario
+Listar funcionario
+
+
+1. Editar funcionario
+
+
+2. Eliminar funcionario
+
+
+3. Pesquisar funcionario
+        (campo)
+    Nome ou bilhete
+  Lista de funcionario

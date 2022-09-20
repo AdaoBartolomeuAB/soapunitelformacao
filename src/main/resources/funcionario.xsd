@@ -3,7 +3,34 @@
            targetNamespace="http://unitel.co/soapwebservice_funcionario"
            elementFormDefault="qualified">
 
+    <xs:element name="findFuncionarioRequest">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="campo" type="xs:string"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
 
+    <!--Atualizar Funcionario-->
+    <xs:element name="updateFuncionarioRequest">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="funcionario" type="tns:funcionarioGet"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+
+    <!--Eliminar Funcionario-->
+    <xs:element name="eliminarFuncionarioRequest">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="id" type="xs:long"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+    <!--Adicionar Funcionario-->
     <xs:element name="addFuncionarioRequest">
         <xs:complexType>
             <xs:sequence>
@@ -19,6 +46,47 @@
             </xs:sequence>
         </xs:complexType>
     </xs:element>
+
+
+    <!--Listar Funcionarios-->
+    <xs:element name="getFuncionariosRequest">
+        <xs:complexType/>
+    </xs:element>
+
+    <xs:element name="getFuncionariosResponse">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="funcionario" type="tns:funcionarioGet" maxOccurs="unbounded"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+    <xs:element name="sucessoResponse">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="mensagem" type="xs:string"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+    <xs:element name="mensagemResponse">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="mensagem" type="xs:string"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+    <!--Objectos-->
+    <xs:complexType name="funcionarioGet">
+        <xs:sequence>
+            <xs:element name="id" type="xs:long"/>
+            <xs:element name="nome" type="xs:string"/>
+            <xs:element name="telefone" type="xs:string"/>
+            <xs:element name="email" type="xs:string"/>
+            <xs:element name="bi" type="xs:string"/>
+        </xs:sequence>
+    </xs:complexType>
 
     <xs:complexType name="funcionario">
         <xs:sequence>
